@@ -20,7 +20,7 @@ jobs:
         run: npm install -g @vscode/vsce
 
       - name: Setup vscode types
-        run: npm install --save-dev @types/vscode
+        run: npm install --save-dev @types/vscode@1.95.0
 
       - name: Package VSIX
         run: vsce package --allow-missing-repository
