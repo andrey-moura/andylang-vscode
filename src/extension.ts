@@ -390,7 +390,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const provider: vscode.DocumentSemanticTokensProvider = {
 		async provideDocumentSemanticTokens(document: vscode.TextDocument): Promise<vscode.SemanticTokens> {
-			log('provideDocumentSemanticTokens called');
+			log(`provideDocumentSemanticTokens for ${document.fileName}`);
+			const text = document.getText();
+			if(text.length < 100) {
+					log(text);
+			}
 			const builder = new vscode.SemanticTokensBuilder(legend);
 			var analyzerServer = new AnalyzerServer();
 			var result = analyzerServer.analyse(document);
