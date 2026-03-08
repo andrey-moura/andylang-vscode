@@ -167,7 +167,8 @@ class AnalyzerServer {
 
 		while(!fs.existsSync(tempOutputFileName)) {
 			log('file does not exist yet, waiting...');
-			// Todo: sleep
+      const waitTime = 5; // probably will wait the minimum time possible
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, waitTime);
 		}
 	
 		var data = fs.readFileSync(tempOutputFileName);
