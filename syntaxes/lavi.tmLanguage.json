@@ -3,14 +3,14 @@
 	"name": "lavi",
 	"patterns": [
 		{
-			"name": "string.quoted.double.lavilang",
+			"name": "string.quoted.double.lavi",
 			"match": "\"([^\"\\\\]|\\\\.)*\""
 		},
 		{
-			"name": "string.quoted.single.lavilang",
+			"name": "string.quoted.single.lavi",
 			"match": "'([^'\\\\]|\\\\.)*'"
 		}
 	],
 	"repository": {},
-	"scopeName": "source.lavilang"
+	"scopeName": "source.lavi"
 }

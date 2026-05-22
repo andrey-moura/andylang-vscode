@@ -391,7 +391,7 @@ function publishDiagnostics(document: vscode.TextDocument, result: AnalyzerResul
 export function activate(context: vscode.ExtensionContext) {
 	isDebugMode = context.extensionMode === vscode.ExtensionMode.Development;
 
-	log('lavi-analyzer extension activated 10');
+	log('lavi-analyzer extension activated 11');
 
 	const disposable = vscode.commands.registerCommand('lavilang.run', () => {
 		const editor = vscode.window.activeTextEditor;
